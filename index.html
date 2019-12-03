@@ -20,7 +20,7 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <!-- Plugin CSS -->
-  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+<!--  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">-->
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
@@ -242,11 +242,17 @@
    
                                         <h2 class="text-center mt-0" >Coding Projects</h2>
                                         <hr class="divider my-4">
+                                        
+
    
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+   
+                                                   <!--project 1-->
+    <div class="col-lg-4 col-sm-6">
+                                          <!----------start <a>tag---------->
+    <a class="portfolio-box js-scroll-trigger" href="#portfolio"  onclick="OpenPopUpFunction1();return;false;"> <!--JS-->
+           
             <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
@@ -257,9 +263,15 @@
               </div>
             </div>
           </a>
+             <!----------------------end <a>tag--------------->
         </div>
+        
+                                                    <!--project 2-->
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+                                          <!----------start <a>tag---------->
+           <a class="portfolio-box js-scroll-trigger" href="#portfolio"  onclick="OpenPopUpFunction2();return;false;"> <!--JS-->
+           
+           
             <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
@@ -270,9 +282,13 @@
               </div>
             </div>
           </a>
+            <!----------------------end <a>tag--------------->
         </div>
+        
+                                                    <!--project 3-->
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+                                           <!----------start <a>tag---------->
+        <a class="portfolio-box js-scroll-trigger" href="#portfolio"  onclick="OpenPopUpFunction3();return;false;"> <!--JS-->
             <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
@@ -382,7 +398,55 @@
       </div>
     </div>
   </footer>
+  
+  
 <div id="paddingBottomDiv" style="line-height: 10px;"></div>
+
+
+                                             <!--Porfolio Info Boxes -->
+
+    <section  id="selfMadePopUp1" >
+    
+  <div style="text-align: right; " ><button style="background-color: transparent; border: none;" onclick="ClosePopUpFunction1()">X</button></div>
+  
+   <h3 align=center >My First Pop Up</h3>
+          <p align=center >This project involves a single tabled database created using ASP.net. the table features styling from datatables.net which has been edited using inline css styling. The currency format is set to GBP using the global settings tag in the webconfig.</p>
+          
+           <div id="gitLogo" class="text-center">
+         <a href="https://greyslatewebdev.github.io/"><img src="img/portfolio/thumbnails/GitHub-Mark-Greyb.png" width=80px alt="Linked in Link Grey" style="margin-bottom: 10px; margin-top: 0px;" style="text-align: center;"></a>
+        </div>
+          
+          </section>
+          
+<!--                   ---------------------PopUp2---------------------->
+          
+              <section  id="selfMadePopUp2" >
+    
+  <div style="text-align: right; " ><button style="background-color: transparent; border: none;" onclick="ClosePopUpFunction2()">X</button></div>
+  
+   <h3 align=center >My Second Pop Up</h3>
+          <p align=center >This project involves a two-tabled database created using ASP.net. the table features styling from datatables.net which has been edited using inline css styling. The currency format is set to GBP using the global settings tag in the webconfig.</p>
+          
+           <div id="gitLogo" class="text-center">
+         <a href="https://greyslatewebdev.github.io/"><img src="img/portfolio/thumbnails/GitHub-Mark-Greyb.png" width=80px alt="Linked in Link Grey" style="margin-bottom: 10px; margin-top: 0px;" style="text-align: center;"></a>
+        </div>
+          
+          </section>
+          
+          <!--                   ---------------------PopUp3---------------------->
+          
+              <section  id="selfMadePopUp3" >
+    
+  <div style="text-align: right; " ><button style="background-color: transparent; border: none;" onclick="ClosePopUpFunction3()">X</button></div>
+  
+   <h3 align=center >My Third Pop Up</h3>
+          <p align=center >This project involves a multi-tabled database created using ASP.net. the table features styling from datatables.net which has been edited using inline css styling. The currency format is set to GBP using the global settings tag in the webconfig.</p>
+          
+           <div id="gitLogo" class="text-center">
+         <a href="https://greyslatewebdev.github.io/"><img src="img/portfolio/thumbnails/GitHub-Mark-Greyb.png" width=80px alt="Linked in Link Grey" style="margin-bottom: 10px; margin-top: 0px;" style="text-align: center;"></a>
+        </div>
+          
+          </section>
  
  
   <!-- Bootstrap core JavaScript -->
@@ -391,10 +455,67 @@
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!--  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>-->
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+  
+<!--  Popup scripts-->
+    <script>
+        
+//        --Popup1--
+            
+    function OpenPopUpFunction1() {
+                
+    var x = document.getElementById("selfMadePopUp1");
+    x.style.display = "block";
+                
+    }     
+        
+    function ClosePopUpFunction1() {
+       
+   var x = document.getElementById("selfMadePopUp1");
+   x.style.display = "none";
+       
+    }
+        
+        
+//               --Popup2--
+            
+    function OpenPopUpFunction2() {
+                
+    var x = document.getElementById("selfMadePopUp2");
+    x.style.display = "block";
+                
+    }       
+  
+    function ClosePopUpFunction2() {
+       
+   var x = document.getElementById("selfMadePopUp2");
+   x.style.display = "none";
+       
+    }
+    
+        //               --Popup3--
+            
+    function OpenPopUpFunction3() {
+                
+    var x = document.getElementById("selfMadePopUp3");
+    x.style.display = "block";
+                
+    }       
+  
+    function ClosePopUpFunction3() {
+       
+   var x = document.getElementById("selfMadePopUp3");
+   x.style.display = "none";
+       
+    }
+        
+        
+        
+        
+    </script>
 
 </body>
 
